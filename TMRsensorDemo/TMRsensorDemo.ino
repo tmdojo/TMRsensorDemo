@@ -66,6 +66,10 @@ void setup(void)
   Serial.println("Getting differential reading from AIN0 (P) and AIN1 (N)");
   Serial.println("ADC Range: +/- 6.144V (1 bit = 3mV/ADS1015, 0.1875mV/ADS1115)");
 
+  // set Pin#1 ADDR of ADC1x15 LOW or HIGH for prpoer operation
+  pinMode(11, OUTPUT);
+  digitalWrite(11, LOW);
+
   // The ADC input range (or gain) can be changed via the following
   // functions, but be careful never to exceed VDD +0.3V max, or to
   // exceed the upper and lower limits if you adjust the input range!
